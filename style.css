@@ -459,6 +459,12 @@ section .title::after{
     font-size: 25px;
     color: crimson;
 }
+.contact .contact-content .row a{
+    color: #111;
+}
+.contact .contact-content .row a:hover{
+    color: crimson;
+}
 .contact .contact-content .info .head{
     font-weight: 500;
 }
@@ -521,18 +527,18 @@ section .title::after{
     color: crimson;
     background: none;
 }
-.contact .right .status{
+.contact .right #status{
     width: 50%;
     text-align: center;
     padding: 10px;
     margin: 0 auto;
     border-radius: 8px;
 }
-.contact .right .status.success{
+.contact .right #status.success{
     background-color: rgb(211, 250, 153);
     animation: status 4s ease forwards;
 }
-.contact .right .status.error{
+.contact .right #status.error{
     background-color: rgb(250, 129, 92);
     color: #fff;
     animation: status 4s ease forwards;
@@ -646,6 +652,9 @@ footer span a:hover{
     .contact .contact-content .column{
         width: 100%;
         margin-bottom: 35px;
+    }
+    .contact .right form .button button{
+        width: 100%;
     }
 }
 @media (max-width: 690px){
