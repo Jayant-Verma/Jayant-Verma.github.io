@@ -42,7 +42,6 @@ html{
     position: fixed;
     width: 100%;
     padding: 30px 0;
-    /* background: crimson; */
     font-family: 'Ubuntu',sans-serif;
     transition: all 0.3s ease;
     z-index: 999;
@@ -142,11 +141,12 @@ section .title::after{
     transform: translateX(-50%);
 }
 
-
 /* home section styling */
 .home {
     display: flex;
-    background: url('images/banner.jpg') no-repeat center;
+    background: #434343;
+    background: url('images/banner2.png') no-repeat right;
+    background: url('images/banner2.png') no-repeat right, linear-gradient(#434343, #000000);
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -284,23 +284,66 @@ section .title::after{
 .skills .skills-content .column{
     width: calc(50% - 30px);
 }
-.skills .skills-content .left .text{
+.skills .skills-content .left .item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.skills .skills-content .left .item i{
+    font-size: 55px;
+    color: crimson;
+    margin: 20px;
+}
+.skills .skills-content .left .tooltip{
+    position: relative;
+}
+.skills .skills-content .left .tooltiptext{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    color: crimson;
+    transform: translateX(-50%);
+    background-color: #111;
+    color: #fff;
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.3s ease;
+}
+.skills .skills-content .left .tooltiptext::before{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: #111;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+.skills .skills-content .left .tooltip:hover .tooltiptext{
+    top: -30%;
+    visibility: visible;
+    opacity: .7;
+}
+.skills .skills-content .right .text{
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.skills .skills-content .left p{
+.skills .skills-content .right p{
     text-align: justify;
 }
-.skills .skills-content .left ul{
+.skills .skills-content .right ul{
     list-style: none;
 }
-.skills .skills-content .left ul li i{
+.skills .skills-content .right ul li i{
     color: crimson;
     margin-left: -1em;
     margin-right: .3em;
 } 
-.skills .skills-content .left a{
+.skills .skills-content .right a{
     display: inline-block;
     background: crimson;
     color: #fff;
@@ -312,36 +355,9 @@ section .title::after{
     border: 2px solid crimson;
     transition: all 0.3s ease;
 }
-.skills .skills-content .left a:hover{
+.skills .skills-content .right a:hover{
     color: crimson;
     background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-size: 18px;
-    font-weight: 500;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: crimson;
 }
 .skills .skills-content .cpp::before{
     width: 80%;
@@ -660,6 +676,16 @@ footer span a:hover{
 @media (max-width: 690px){
     .max-width{
         padding: 0 23px;
+    }
+    .navbar{
+        background-color: #434343;
+    }
+    .home{
+        background-size: 350px;
+        background-position: center 100px;
+    }
+    .home .home-content{
+        margin-top: 280px;
     }
     .home .home-content .text-2{
         font-size: 60px;
