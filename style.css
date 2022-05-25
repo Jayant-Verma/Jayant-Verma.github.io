@@ -607,6 +607,11 @@ footer span a:hover{
 }
 
 /* responsive media query */
+@media (max-width: 1300px) {
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
 @media (max-width: 1104px){
     .about .about-content .left img{
         height: 350px;
@@ -689,13 +694,10 @@ footer span a:hover{
     .max-width{
         padding: 0 23px;
     }
-    .navbar{
-        background: #303841;
-    }
     .home{
         background-attachment: scroll;
         background-size: 350px;
-        background-position: center 100px;
+        background-position: center 25%;
     }
     .home .home-content{
         margin-top: 280px;
