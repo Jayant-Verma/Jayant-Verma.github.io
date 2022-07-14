@@ -28,7 +28,7 @@
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#education" class="menu-btn">Education</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#certificates" class="menu-btn">Certificates</a></li>
+                <li><a href="#projects" class="menu-btn">Projects</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
@@ -55,7 +55,7 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="images/profile-1.jpeg" alt="">
+                    <img src="images/banner.png" alt="">
                 </div>
                 <div class="column right">
                     <div class="text">Hi, I am Jayant and I am a <span class="typing-2"></span></div>
@@ -165,10 +165,10 @@
         </div>
     </section>
 
-    <!-- certificates section  -->
-    <section class="certificates" id="certificates">
+    <!-- projects section  -->
+    <section class="projects" id="projects">
         <div class="max-width">
-            <h2 class="title">My certificates</h2>
+            <h2 class="title">My projects</h2>
             <div class="carousel owl-carousel">
                 <a href="https://www.hackerrank.com/certificates/ee75e3a60562">
                     <div class="card">
@@ -267,6 +267,25 @@
         <span>Created by <a href="#">jayantverma</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
     </footer>
     <script src="script.js"></script>
-    <script src="banner.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+    VANTA.NET({
+      el: "#home",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0x303841,
+      color:  0x4e99ca,
+      spacing: 14.00,
+      showDots: false
+    })
+    </script>
+
 </body>
 </html>
