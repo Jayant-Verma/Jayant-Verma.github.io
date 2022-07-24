@@ -231,9 +231,6 @@ section .title::after {
 .about .about-content .right .text span {
     color: #ff5722;
 }
-.about .about-content .right p {
-    text-align: justify;
-}
 .about .about-content .right a {
     display: inline-block;
     background: #ff5722;
@@ -353,9 +350,6 @@ section .title::after {
     font-weight: 600;
     margin-bottom: 10px;
 }
-.skills .skills-content .right p {
-    text-align: justify;
-}
 .skills .skills-content .right ul {
     list-style: none;
 }
@@ -398,49 +392,73 @@ section .title::after {
 
 /* projects section styling */
 .projects .title::after {
-    content: "what I earned";
+    content: "what I developed";
 }
-.projects .carousel a {
-    text-decoration: none;
-    color: #eeeeee;
-}
+
 .projects .carousel .card {
     background: #205375;
-    border-radius: 6px;
-    padding: 25px 35px;
+    border-radius: 20px;
     transition: all 0.3s ease;
-    cursor: pointer;
 }
-.projects .carousel .card:hover {
-    background: #ff5722;
-}
+
 .projects .carousel .card .box {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.projects .carousel .card .box:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+.projects .carousel .card .details {
+    padding: 20px 10px;
+    height: 180px;
+}
+.projects .carousel .card .details p {
+    color: #a0a0a0;
+}
+
+.projects .carousel .card img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+    transition: all 0.3s ease;
+}
+
+.projects .carousel .card:hover img {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.projects .carousel .card .links {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+}
+
+.projects .carousel .card a {
+    display: inline-block;
+    background: #ff5722;
+    color: #eeeeee;
+    padding: 8px 24px;
+    margin: 0 10px 20px 10px;
+    border-radius: 6px;
+    border: 2px solid #ff5722;
     transition: all 0.3s ease;
 }
-.projects .carousel .card:hover .box {
-    transform: scale(1.05);
+
+.projects .carousel .card a:hover {
+    color: #ff5722;
+    background: none;
 }
-.projects .carousel .card .text {
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.projects .carousel .card img {
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #ff5722;
-    transition: all 0.3s ease;
-}
-.projects .carousel .card:hover img {
-    border-color: #eeeeee;
-}
+
 .owl-dots {
     text-align: center;
     margin-top: 20px;
@@ -474,9 +492,6 @@ section .title::after {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
-}
-.contact .contact-content .left p {
-    text-align: justify;
 }
 .contact .contact-content .left p a {
     color: #ff5722;
@@ -618,6 +633,9 @@ footer span a:hover {
     .about .about-content .left img {
         width: 350px;
     }
+    .projects .carousel .card .details {
+        height: 200px;
+    }
 }
 @media (max-width: 1104px) {
     .about .about-content .column {
@@ -711,6 +729,7 @@ footer span a:hover {
         width: 100%;
     }
 }
+
 @media (max-width: 500px) {
     .home .home-content .text-2 {
         font-size: 50px;
