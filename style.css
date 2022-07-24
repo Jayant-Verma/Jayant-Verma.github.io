@@ -231,6 +231,9 @@ section .title::after {
 .about .about-content .right .text span {
     color: #ff5722;
 }
+.about .about-content .right p {
+    text-align: justify;
+}
 .about .about-content .right a {
     display: inline-block;
     background: #ff5722;
@@ -492,6 +495,9 @@ section .title::after {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+    text-align: justify;
 }
 .contact .contact-content .left p a {
     color: #ff5722;
